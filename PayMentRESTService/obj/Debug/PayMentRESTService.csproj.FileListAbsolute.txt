@@ -1,0 +1,12 @@
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\PayMentRESTService.dll.config
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\PayMentRESTService.dll
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\PayMentRESTService.pdb
+D:\12 date08\PayMentRESTService\PayMentRESTService\obj\Debug\PayMentRESTService.csproj.AssemblyReference.cache
+D:\12 date08\PayMentRESTService\PayMentRESTService\obj\Debug\PayMentRESTService.csproj.CoreCompileInputs.cache
+D:\12 date08\PayMentRESTService\PayMentRESTService\obj\Debug\PayMentRESTService.dll
+D:\12 date08\PayMentRESTService\PayMentRESTService\obj\Debug\PayMentRESTService.pdb
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\EntityFramework.dll
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\EntityFramework.SqlServer.dll
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\EntityFramework.xml
+D:\12 date08\PayMentRESTService\PayMentRESTService\bin\EntityFramework.SqlServer.xml
+D:\12 date08\PayMentRESTService\PayMentRESTService\obj\Debug\PayMentRESTService.csproj.CopyComplete
