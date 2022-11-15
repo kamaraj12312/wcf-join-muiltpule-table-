@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TestDB.dbo.Department' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TestDB.dbo.Employee' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="500" />
+    <Property Name="Department" Type="nvarchar" MaxLength="500" />
+    <Property Name="DateOfJoining" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TestDB.dbo.ProductDescription' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ProductDescription">
+    <Key>
+      <PropertyRef Name="ProductDesId" />
+    </Key>
+    <Property Name="ProductDesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductId" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProdDetails" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TestDB.dbo.Products' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProdId" />
+    </Key>
+    <Property Name="ProdId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProdName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModelId" Type="nvarchar" MaxLength="50" />
+    <Property Name="EmployeeName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="TestDBModel1StoreContainer">
+    <EntitySet Name="Department" EntityType="Self.Department" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Department].[DepartmentId] AS [DepartmentId], 
+    [Department].[DepartmentName] AS [DepartmentName]
+    FROM [dbo].[Department] AS [Department]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Employee" EntityType="Self.Employee" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Employee].[EmployeeId] AS [EmployeeId], 
+    [Employee].[EmployeeName] AS [EmployeeName], 
+    [Employee].[Department] AS [Department], 
+    [Employee].[DateOfJoining] AS [DateOfJoining]
+    FROM [dbo].[Employee] AS [Employee]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ProductDescription" EntityType="Self.ProductDescription" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ProductDescription].[ProductDesId] AS [ProductDesId], 
+    [ProductDescription].[ProductId] AS [ProductId], 
+    [ProductDescription].[ProdDetails] AS [ProdDetails]
+    FROM [dbo].[ProductDescription] AS [ProductDescription]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Products" EntityType="Self.Products" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Products].[ProdId] AS [ProdId], 
+    [Products].[ProdName] AS [ProdName], 
+    [Products].[Price] AS [Price], 
+    [Products].[ModelId] AS [ModelId], 
+    [Products].[EmployeeName] AS [EmployeeName]
+    FROM [dbo].[Products] AS [Products]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

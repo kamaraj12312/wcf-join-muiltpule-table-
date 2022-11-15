@@ -60,12 +60,12 @@ namespace PayMentRESTService
         {
             List<Cities> listCity = new List<Cities>();
 
-            SqlConnection connection = new SqlConnection("Data Source=10.50.51.117;Initial Catalog=TestDB;User ID=bms0176;Password=Welcome@123");
-            using (connection)
+           SqlConnection connection = new SqlConnection("Data Source=10.50.51.117;Initial Catalog=TestDB;User ID=bms0176;Password=Welcome@123");
+           using (connection)
             {
-                SqlCommand command = new SqlCommand("select * from dCity", connection);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
+               SqlCommand command = new SqlCommand("select * from dCity", connection);
+               connection.Open();
+               SqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
                     Cities City = new Cities();

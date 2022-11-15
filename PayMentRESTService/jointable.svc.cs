@@ -19,7 +19,6 @@ namespace PayMentRESTService
                         join r in Test.StudentRanks on s.Id.ToString() equals r.Id
                         //orderby r.Marks
 
-
                         select s).AsEnumerable().Select(x =>
                         new StudentDetail
                         {
@@ -27,10 +26,10 @@ namespace PayMentRESTService
                             Name = x.Name,
                             Marks = x.Marks,
                             RollNo = x.RollNo
-
                         }).ToList();
 
             return stud;
+
 
 
            // throw new NotImplementedException();
